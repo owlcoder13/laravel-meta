@@ -1,0 +1,16 @@
+{
+    "name": "owlcoder/laravel-meta",
+    "description": "Meta helper for laravel",
+    "authors": [
+        {
+            "name": "Mikhail",
+            "email": "owlcoder1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Owlcoder\\LaravelMeta\\": "src/"
+        }
+    }
+}
