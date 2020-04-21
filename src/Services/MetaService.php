@@ -2,8 +2,7 @@
 
 namespace Owlcoder\LaravelMeta\Services;
 
-use App\Helpers\HtmlHelper;
-use App\Models\MetaInfo;
+use Owlcoder\Common\Helpers\Html;
 
 class MetaService
 {
@@ -18,14 +17,14 @@ class MetaService
         $out = [];
 
         if ( ! empty($this->description)) {
-            $out[] = HtmlHelper::tag('meta', '', [
+            $out[] = Html::tag('meta', '', [
                 'name' => 'description',
                 'content' => $this->description,
             ]);
         }
 
         if ( ! empty($this->keywords)) {
-            $out[] = HtmlHelper::tag('meta', '', [
+            $out[] = Html::tag('meta', '', [
                 'name' => 'keywords',
                 'content' => $this->keywords,
             ]);
@@ -40,23 +39,12 @@ class MetaService
 
     public function addMeta($options)
     {
-        return HtmlHelper::tag('meta', '', $options);
+        return Html::tag('meta', '', $options);
     }
 
     public function setDescription($description)
     {
         $this->description = $description;
-    }
-
-    public function loadFromMeta($name)
-    {
-        $metaInfo = MetaInfo::whereName($name)->first();
-
-        if ($metaInfo != null) {
-            $this->description = $metaInfo->translation->meta_description;
-            $this->title = $metaInfo->translation->meta_title;
-            $this->keywords = $metaInfo->translation->meta_keywords;
-        }
     }
 
     public function setTitle($title)
