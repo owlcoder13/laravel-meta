@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Owlcoder\\LaravelMeta\\MetaServiceProvider"
+                "Owlcoder\\LaravelMeta\\Providers\\MetaServiceProvider"
             ],
             "aliases": {
                 "Meta": "Owlcoder\\LaravelMeta\\Facades\\Meta"
