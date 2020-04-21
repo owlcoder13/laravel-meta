@@ -12,7 +12,7 @@ class MetaService
     public $description;
     public $keywords;
 
-    public function render()
+    public function renderHeader()
     {
         $out = [];
 
@@ -50,6 +50,11 @@ class MetaService
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
     }
 
     public function renderTitle()

@@ -2,7 +2,7 @@
 
 namespace Owlcoder\LaravelMeta\Facades;
 
-use App\Services\Meta\MetaService;
+use Owlcoder\LaravelMeta\Services\MetaService;
 use Illuminate\Support\Facades\Facade;
 
 /**
