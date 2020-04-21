@@ -3,6 +3,7 @@
 namespace Owlcoder\LaravelMeta\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Owlcoder\LaravelMeta\Services\MetaService;
 
 class MetaServiceProvider extends ServiceProvider
 {

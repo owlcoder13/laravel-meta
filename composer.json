@@ -12,5 +12,18 @@
         "psr-4": {
             "Owlcoder\\LaravelMeta\\": "src/"
         }
-    }
+    },
+    "require": {
+        "owlcoder/common": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Owlcoder\\LaravelMeta\\MetaServiceProvider"
+            ],
+            "aliases": {
+                "Meta": "Owlcoder\\LaravelMeta\\Facades\\Meta"
+            }
+        }
+    },
 }
